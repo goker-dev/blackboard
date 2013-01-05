@@ -1,0 +1,89 @@
+* {
+    outline: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font: 11px/1.264 sans-serif;
+    background: #000;
+    overflow: hidden;
+}
+header {
+    position: fixed;
+    top: 0;
+    left:0;
+    display:block;
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #111;
+    background: #222;
+    z-index: 10000;
+}
+
+header h1 {
+    margin:0;
+    padding: 0 13px;
+    font-size: 12px;
+    line-height: 30px;
+}
+header h1 b {
+    padding: 0 8px;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    padding: 0 13px;
+    min-width: 400px;
+    line-height: 30px;
+    text-align: right;
+}
+nav a {
+    padding: 0 8px;
+    color: #bbb;
+    cursor: pointer;
+}
+nav a:hover, nav a:focus, nav a.selected {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#black {
+    position: relative;
+    display: table;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+#board {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Waiting for the Sunrise', sans-serif; 
+    font-weight: 400;
+    font-size: 60px;
+    text-align: center;
+    vertical-align: middle;
+}
+#canvas {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    cursor: pointer;
+}
