@@ -55,6 +55,10 @@ nav a:hover, nav a:focus, nav a.selected {
     text-decoration: underline;
 }
 
+#drawred {
+    color: red;
+}
+
 #black {
     position: relative;
     display: table;

@@ -28,6 +28,15 @@ $('#draw').addEventListener('click', function(e) {
     $('#write').removeAttribute('class');
     drawing = true;
     writing = false;
+    color = "#fff";
+}, false);
+
+$('#drawred').addEventListener('click', function(e) {
+    this.setAttribute('class', 'selected');
+    $('#write').removeAttribute('class');
+    drawing = true;
+    writing = false;
+    color = "red";
 }, false);
 
 $('#clear').addEventListener('click', function(e) {
@@ -48,7 +57,7 @@ var start = function(coors) {
 };
 var move = function(coors) {
     if (this.isDrawing) {
-        context.strokeStyle = "#fff";
+        context.strokeStyle = color;
         context.lineJoin = "round";
         context.lineWidth = 3;
         context.lineTo(coors.x, coors.y);
