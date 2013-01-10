@@ -29,6 +29,7 @@ $('#draw').addEventListener('click', function(e) {
     drawing = true;
     writing = false;
     color = "#fff";
+    size = "3";
 }, false);
 
 $('#drawred').addEventListener('click', function(e) {
@@ -37,6 +38,16 @@ $('#drawred').addEventListener('click', function(e) {
     drawing = true;
     writing = false;
     color = "red";
+    size = "3";
+}, false);
+
+$('#eraser').addEventListener('click', function(e) {
+    this.setAttribute('class', 'selected');
+    $('#write').removeAttribute('class');
+    drawing = true;
+    writing = false;
+    color = "#000";
+    size = "11";
 }, false);
 
 $('#clear').addEventListener('click', function(e) {
@@ -59,7 +70,7 @@ var move = function(coors) {
     if (this.isDrawing) {
         context.strokeStyle = color;
         context.lineJoin = "round";
-        context.lineWidth = 3;
+        context.lineWidth = size;
         context.lineTo(coors.x, coors.y);
         context.stroke();
     }
