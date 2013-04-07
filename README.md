@@ -1,17 +1,17 @@
 blackboard
-=========
+==========
 
-__blackboard__ is an application for google chrome or chromium "while recording tutorials instead of talking you can use it".
+__blackboard__ is an application for Google Chrome or Chromium.
+It is for writing or drawing while recording tutorials instead of talking.
 
+Application
+-----------
+Visit the [link](https://chrome.google.com/webstore/detail/blackboard/doakoidnlldglphcgpdbbgcnamlppemh) for install the app on your browser.
 
-USAGE
+License
 -------
-Visit the [link][1] for install the app on your browser.
+It is under [MIT License](https://github.com/gokercebeci/canvasResize/blob/master/LICENCE.md "MIT License") 
 
-LICENSE
--------
-It is under the [MIT License][2].
-
-
-[1]: https://chrome.google.com/webstore/detail/blackboard/doakoidnlldglphcgpdbbgcnamlppemh
-[2]: https://github.com/gokercebeci/blackboard/blob/master/LICENSE.md
+Developer
+---------
+[goker](http://gokercebeci.com/ "goker")

@@ -3,18 +3,43 @@
         <meta charset="utf-8" />
         <title>black board</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        <link href="http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css" />
-        <link href="default.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="default.css" />
+        <link rel="stylesheet" href="farbtastic/farbtastic.css" />
     </head>
     <body>
         <header>
-            <h1>blackboard <b>v2.0.0</b></h1>
+            <h1>blackboard</h1>
             <nav>
-                <a id="write">write</a>
-                <a id="draw">draw</a>
-                <a id="drawred">draw red</a>
-                <a id="eraser">eraser</a>
-                <a id="clear">clear</a>
+                <a id="fonts">fonts
+                    <ul>
+                        <li data-font="Courgette">Courgette</li>
+                        <li data-font="Great Vibes">Great Vibes</li>
+                        <li data-font="Marck Script">Marck Script</li>
+                        <li data-font="Metamorphous">Metamorphous</li>
+                        <li data-font="Oleo Script">Oleo Script</li>
+                        <li data-font="Open Sans">Open Sans</li>
+                        <li data-font="Oswald">Oswald</li>
+                        <li data-font="Raleway">Raleway</li>
+                        <li data-font="Shadows Into Light">Shadows Into Light</li>
+                        <li data-font="Shadows Into Light Two">Shadows Into Light Two</li>
+                        <li data-font="Special Elite">Special Elite</li>
+                        <li data-font="Unkempt">Unkempt</li>
+                        <li data-font="Waiting for the Sunrise">Waiting for the Sunrise</li>
+                    </ul>
+                </a>
+                <a id="color">color
+                    <b id="box"></b>
+                    <ul id="picker"></ul>
+                </a>
+                | 
+                <a id="increase" title="increase (ctrl+up)">+</a>
+                <a id="size" title="size">0</a>
+                <a id="decrease" title="decrease (ctrl+down)">-</a>
+                |
+                <a id="write" title="write (ctrl+left)">write</a>
+                <a id="draw" title="draw (crtl+right)">draw</a>
+                <a id="clear" title="clear all (ctrl+delete)">clear</a>
+                | 
                 <a href="http://www.youtube.com/watch?v=UO1DQP4dtb4">?help</a>
             </nav>
         </header>
@@ -22,6 +47,16 @@
             <div id="board"></div>
             <canvas id="canvas"></canvas>
         </div>
+        <footer>
+            <a href="https://gokercebeci.com/blog/blackboard">blackboard v3.0.0</a>
+            <p id="developer"> 
+                <a href="https://twitter.com/gokercebeci/status/320951288651202560">feedback</a><span>|</span>
+                <a href="https://gokercebeci.com/dev/donate?feature=blackboard">donate</a><span>|</span>
+                developed by <a href="https://gokercebeci.com?feature=blackboard" title="goker"> goker</a>
+            </p>
+        </footer>
+        <script src="zepto.min.js"></script>
+        <script src="farbtastic/farbtastic.js"></script>
         <script src="default.js"></script>
     </body>
 </html>

@@ -1,11 +1,115 @@
-* {
-    outline: 0;
+/* -----------------------------------------------------------------------------
+    FONTS
+----------------------------------------------------------------------------- */
+@font-face {
+    font-family: 'Courgette';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Courgette Regular'), local('Courgette-Regular'), url(fonts/Courgette-Regular.woff) format('woff');
 }
-body {
+@font-face {
+    font-family: 'Great Vibes';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Great Vibes'), local('GreatVibes-Regular'), url(fonts/GreatVibes-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Marck Script';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Marck Script'), local('MarckScript-Regular'), url(fonts/MarckScript-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Metamorphous';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Metamorphous'), url(fonts/Metamorphous.woff) format('woff');
+}
+@font-face {
+    font-family: 'Oleo Script';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Oleo Script'), local('OleoScript-Regular'), url(fonts/OleoScript-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(fonts/OpenSans.woff) format('woff');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Oswald Regular'), local('Oswald-Regular'), url(fonts/Oswald-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), url(fonts/Raleway.woff) format('woff');
+}
+@font-face {
+    font-family: 'Shadows Into Light';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Shadows Into Light'), local('ShadowsIntoLight'), url(fonts/ShadowsIntoLight.woff) format('woff');
+}
+@font-face {
+    font-family: 'Shadows Into Light Two';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Shadows Into Light Two'), local('ShadowsIntoLightTwo-Regular'), url(fonts/ShadowsIntoLightTwo-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Special Elite';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Special Elite'), local('SpecialElite-Regular'), url(fonts/SpecialElite-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Unkempt';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Unkempt'), url(fonts/Unkempt.woff) format('woff');
+}
+@font-face {
+    font-family: 'Waiting for the Sunrise';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Waiting for the Sunrise'), local('WaitingfortheSunrise'), url(fonts/WaitingfortheSunrise.woff) format('woff');
+}
+@font-face {
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    src: local('MontserratAlternates-Regular'), url('fonts/MontserratAlternates-Regular.woff') format('woff');
+}
+/* -----------------------------------------------------------------------------
+    STYLES
+----------------------------------------------------------------------------- */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    outline: none;
     margin: 0;
     padding: 0;
+    border: 0;
+}
+::-webkit-selection{ background:#fff; color:#000; text-shadow:none; }
+::selection{ background:#fff; color:#000; text-shadow:none; }
+html, body {
+    margin: 0;
+    padding:0;
     width: 100%;
     height: 100%;
+}
+body {
     color: #fff;
     font: 11px/1.264 sans-serif;
     background: #000;
@@ -26,13 +130,8 @@ header {
 header h1 {
     margin:0;
     padding: 0 13px;
-    font-size: 12px;
-    line-height: 30px;
-}
-header h1 b {
-    padding: 0 8px;
-    font-size: 10px;
-    font-weight: normal;
+    font: 14px/30px 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
 }
 
 nav {
@@ -42,11 +141,14 @@ nav {
     display: block;
     padding: 0 13px;
     min-width: 400px;
-    line-height: 30px;
+    font: 11px/30px 'Montserrat Alternates', sans-serif;
     text-align: right;
 }
 nav a {
+    position: relative;
+    display: inline-block;
     padding: 0 8px;
+    height: 30px;
     color: #bbb;
     cursor: pointer;
 }
@@ -54,9 +156,38 @@ nav a:hover, nav a:focus, nav a.selected {
     color: #fff;
     text-decoration: underline;
 }
-
-#drawred {
-    color: red;
+nav a ul {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 5px;
+    width: 210px;
+    text-align: left;
+    border-bottom: 1px solid #111;
+    background: #222;
+}
+nav a:hover ul {
+    display: block;
+}
+#fonts li {
+    line-height: 20px;
+    list-style: none;
+    border-bottom: 1px solid #111;
+    cursor: pointer;
+}
+#fonts li:hover {
+    background: #333;
+}
+#box {
+    display: inline-block;
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+#size {
+    width: 40px;
+    text-align: center;
 }
 
 #black {
@@ -69,13 +200,9 @@ nav a:hover, nav a:focus, nav a.selected {
     background: #000;
 }
 #board {
+    -webkit-user-select: text;
+    user-select: text;
     display: table-cell;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-family: 'Waiting for the Sunrise', sans-serif; 
-    font-weight: 400;
-    font-size: 60px;
     text-align: center;
     vertical-align: middle;
 }
@@ -90,4 +217,39 @@ nav a:hover, nav a:focus, nav a.selected {
     height: 100%;
     z-index: 2000;
     cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 0 20px;;
+    width: 100%;
+    height: 30px;
+    color: #888;
+    font: 11px/30px 'Montserrat Alternates', sans-serif;
+    border-top: 1px solid #131313;
+    background: #111;
+    z-index: 10000;
+}
+footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+#developer {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+}
+#developer span {
+    display: inline-block;
+    padding: 0 10px;
+}
+#developer a {
+    margin: 0;
+    padding: 0;
 }
